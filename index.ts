@@ -13,7 +13,7 @@ server.app.use(bodyParser.json() as RequestHandler);
 server.app.use(cors({ origin: true, credentials: true }));
 
 // Rutas de servicios
-server.app.use('/', router);
+server.app.use('/socket', router);
 
 server.start(() => {
     console.log(`Servidor corriendo en el puerto ${server.port}`);
